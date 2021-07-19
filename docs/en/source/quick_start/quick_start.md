@@ -2,6 +2,12 @@
 
 This tutorial helps you run your first example with **OpenBox**.
 
+![](../../../imgs/ab_testing.png)
+
+<p align="center">
+<img src="../../../imgs/ab_testing.png" width="90%">
+</p>
+
 ## Define Configuration Space
 
 First, define a configuration space using **ConfigSpace** for searching.
