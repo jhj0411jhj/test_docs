@@ -2,10 +2,13 @@
 
 This tutorial helps you run your first example with **OpenBox**.
 
-the bare markdown will show the image:
+the bare markdown will show the image, but with no align or scale:
+
 ![](../../../imgs/ab_testing.png)
 
-the html image outside source root is not shown :
+
+the html image outside source root is not shown:
+
 <p align="center">
 <img src="../../../imgs/ab_testing.png" width="90%">
 </p>
@@ -13,6 +16,31 @@ the html image outside source root is not shown :
 try html_image in myst-parser (succeed with align and scale):
 
 <img src="../../../imgs/ab_testing.png" width="50%" align="center">
+
+<img src="../../../imgs/ab_testing.png" width="50%" class="align-center">
+
+
+this syntax extension in MyST will show the image correctly,
+but normal markdown user cannot see the picture (e.g. in github):
+
+```{image} ../../../imgs/ab_testing.png
+:alt: ab_test
+:class: bg-primary
+:width: 200px
+:align: center
+```
+
+
+try another:
+
+:::{figure-md} fig-target
+:class: myclass
+:align: center
+
+<img src="../../../imgs/ab_testing.png" alt="ab_test" class="bg-primary mb-1" width="200px">
+
+This is a caption in **Markdown**
+:::
 
 
 $$
