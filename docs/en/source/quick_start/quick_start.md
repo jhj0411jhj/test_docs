@@ -2,13 +2,24 @@
 
 This tutorial helps you run your first example with **OpenBox**.
 
+the bare markdown will show the image:
 ![](../../../imgs/ab_testing.png)
 
+the html image outside source root is not shown :
 <p align="center">
 <img src="../../../imgs/ab_testing.png" width="90%">
 </p>
 
-$f(x)=1$
+try html_image in myst-parser (succeed with align and scale):
+
+<img src="../../../imgs/ab_testing.png" width="50%" align="center">
+
+
+$$
+f(x)=1
+$$
+
+$h(x)=3$
 
 $$
 g(x)=2
