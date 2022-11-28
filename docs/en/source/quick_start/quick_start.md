@@ -8,6 +8,14 @@ This tutorial helps you run your first example with **OpenBox**.
 <img src="../../../imgs/ab_testing.png" width="90%">
 </p>
 
+$f(x)=1$
+
+$$
+g(x)=2
+$$
+
+www.baidu.com
+
 ## Define Configuration Space
 
 First, define a configuration space using **ConfigSpace** for searching.

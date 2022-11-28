@@ -13,8 +13,8 @@
 import os
 import sys
 import sphinx_rtd_theme
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
+# from recommonmark.parser import CommonMarkParser
+# from recommonmark.transform import AutoStructify
 
 sys.path.insert(0, os.path.abspath('./../../../'))
 
@@ -33,13 +33,33 @@ release = 'beta'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark', 'sphinx.ext.autodoc',
-              'sphinx.ext.doctest',
-              'sphinx.ext.intersphinx',
-              'sphinx.ext.todo',
-              'sphinx.ext.coverage',
-              'sphinx.ext.mathjax',
-              'sphinx.ext.napoleon']
+extensions = [
+    # 'recommonmark',
+    'myst_parser',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.napoleon',
+]
+
+myst_enable_extensions = [
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "linkify",  # pip install linkify-it-py
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -74,20 +94,24 @@ html_theme_options = {
 }
 html_logo = '../logos/logo.png'
 
-source_parsers = {
-    '.md': CommonMarkParser,
+# source_parsers = {
+#     '.md': CommonMarkParser,
+# }
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
 }
-source_suffix = ['.rst', '.md']
-github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/docs/'
+# github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/docs/'
 
 
 # app setup hook
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-        'url_resolver': lambda url: github_doc_root + url,
-        'auto_toc_tree_section': 'Contents',
-        'enable_math': False,
-        'enable_inline_math': False,
-        'enable_eval_rst': True
-    }, True)
-    app.add_transform(AutoStructify)
+# def setup(app):
+#     app.add_config_value('recommonmark_config', {
+#         'url_resolver': lambda url: github_doc_root + url,
+#         'auto_toc_tree_section': 'Contents',
+#         'enable_math': True,
+#         'enable_inline_math': True,
+#         'enable_eval_rst': True
+#     }, True)
+#     app.add_transform(AutoStructify)

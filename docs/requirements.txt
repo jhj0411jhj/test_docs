@@ -1,3 +1,4 @@
 sphinx
 sphinx-rtd-theme
-recommonmark
+myst-parser
+linkify-it-py
