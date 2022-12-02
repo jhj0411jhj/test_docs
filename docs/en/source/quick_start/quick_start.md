@@ -214,3 +214,4 @@ history.visualize_jupyter()
 
 ![](../assets/visualize_jupyter_branin.png)
 
+test commit 1
