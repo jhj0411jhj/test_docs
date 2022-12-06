@@ -33,6 +33,7 @@ Contents
     Overview <overview>
     Installation <installation/installation_guide>
     Quick Start <quick_start/quick_start>
+    rst doc example <doc_examples/pytorch_rst_complex_example>
 
 
 Indices and tables
