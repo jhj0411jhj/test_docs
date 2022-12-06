@@ -24,6 +24,7 @@ Contents
     Overview中文 <overview>
     Installation中文 <installation/installation_guide>
     Quick Start中文 <quick_start/quick_start>
+    rst doc example <doc_examples/pytorch_rst_complex_example>
 
 
 Indices and tables
