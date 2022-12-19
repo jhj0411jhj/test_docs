@@ -2,6 +2,17 @@
 
 This tutorial helps you run your first example with **OpenBox**.
 
+## test ref
+
+{ref}`design principle <overview/overview:design principle>`
+
+[](<overview/overview:design principle>)
+
+[](./overview/overview.md#design-principle)
+
+
+## test image
+
 the bare markdown will show the image, but with no align or scale:
 
 ![](../imgs/ab_testing.png)
@@ -49,6 +60,8 @@ try Inline attributes: (experimental. need `attrs_image` in `myst_enable_extensi
 {ref}`a reference to the image <imgattr>`
 
 
+## test formula
+
 $$
 f(x)=1
 $$
@@ -59,7 +72,10 @@ $$
 g(x)=2
 $$
 
+## test linkify
+
 www.baidu.com
+
 
 ## Define Configuration Space
 
