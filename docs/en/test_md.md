@@ -4,9 +4,17 @@ This tutorial helps you run your first example with **OpenBox**.
 
 ## test ref
 
+`sphinx.ext.autosectionlabel` with `autosectionlabel_prefix_document = True`
+
+use myst-parser ref syntax:
+
 {ref}`design principle <overview/overview:design principle>`
 
+use markdown link with autosectionlabel:
+
 [](<overview/overview:design principle>)
+
+use markdown link with anchor (`myst_heading_anchors = 3`)
 
 [](./overview/overview.md#design-principle)
 

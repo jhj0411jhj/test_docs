@@ -18,9 +18,9 @@ sys.path.insert(0, os.path.abspath('./../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'OpenBox'
-copyright = f'{date.today().year}, PKU-DAIR'
-author = 'PKU-DAIR'
+project = 'Test Docs'
+copyright = f'{date.today().year}, JHJ'
+author = 'JHJ'
 
 # The full version, including alpha/beta/rc tags
 # from openbox import version as _version
@@ -44,6 +44,17 @@ extensions = [
     'sphinx.ext.napoleon',
 ]
 
+# https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html
+# example:
+#     rst: :ref:`design principle <overview/overview:design principle>`
+#     md: {ref}`design principle <overview/overview:design principle>`
+#         or [](<overview/overview:design principle>)  (hoverxref CANNOT identify this syntax!)
+extensions += ['sphinx.ext.autosectionlabel']
+# Make sure the target is unique
+autosectionlabel_prefix_document = True  # ref example: `dir/file:header`
+autosectionlabel_maxdepth = None  # Must be None. Or failed to build change_logs
+
+
 # myst_parser
 # documentation: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
 myst_enable_extensions = [
@@ -60,7 +71,22 @@ myst_enable_extensions = [
     "strikethrough",
     "substitution",
     "tasklist",
+
+    "attrs_image",  # (experimental) https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#inline-attributes
 ]
+# https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
+myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle)
+
+
+# Show tooltip when hover on the reference. Currently, only Read the Docs is supported as backend server!
+# https://sphinx-hoverxref.readthedocs.io/
+extensions += ['hoverxref.extension']
+hoverxref_auto_ref = True
+hoverxref_role_types = {}
+hoverxref_default_type = 'tooltip'
+hoverxref_sphinxtabs = True
+hoverxref_mathjax = True
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

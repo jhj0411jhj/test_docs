@@ -6,7 +6,7 @@
 :github_url: https://github.com/PKU-DAIR/open-box
 
 ###############################################################
-OpenBox: Generalized and Efficient Blackbox Optimization System
+This is a docs for test!!!
 ###############################################################
 
 **OpenBox** is an efficient open-source system designed for **solving

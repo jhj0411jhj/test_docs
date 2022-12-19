@@ -18,9 +18,9 @@ sys.path.insert(0, os.path.abspath('./../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'OpenBox'
-copyright = f'{date.today().year}, PKU-DAIR'
-author = 'PKU-DAIR'
+project = 'Test Docs'
+copyright = f'{date.today().year}, JHJ'
+author = 'JHJ'
 
 # The full version, including alpha/beta/rc tags
 # from openbox import version as _version
