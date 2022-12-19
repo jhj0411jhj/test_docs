@@ -60,6 +60,8 @@ myst_enable_extensions = [
     "strikethrough",
     "substitution",
     "tasklist",
+
+    "attrs_image",  # (experimental) https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#inline-attributes
 ]
 
 # Add any paths that contain templates here, relative to this directory.

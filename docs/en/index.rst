@@ -107,6 +107,7 @@ HpBandSter     ×          √    ×          ×       √
     :maxdepth: 2
     :titlesonly:
 
+    test md <test_md>
     Overview <overview/overview>
     Installation <installation/installation_guide>
     Quick Start <quick_start/quick_start>
