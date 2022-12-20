@@ -110,7 +110,7 @@ HpBandSter     ×          √    ×          ×       √
     test md <test_md>
     Overview <overview/overview>
     Installation <installation/installation_guide>
-    Quick Start <quick_start/quick_start>
+    Quick Start :octicon:`rocket;1em` <quick_start/quick_start>
     Examples <examples/examples>
     Visualization (New!) <visualization/visualization>
     Advanced Usage <advanced_usage/advanced_usage>
