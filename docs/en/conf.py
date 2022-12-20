@@ -86,8 +86,8 @@ myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle) (
 extensions += ['hoverxref.extension']
 hoverxref_auto_ref = True
 hoverxref_role_types = {}
-hoverxref_default_type = 'modal'  # for testing!! should use tooltip
-hoverxref_sphinxtabs = True
+hoverxref_default_type = 'tooltip'  # 'modal' or 'tooltip'
+# hoverxref_sphinxtabs = True
 # hoverxref_mathjax = True
 
 

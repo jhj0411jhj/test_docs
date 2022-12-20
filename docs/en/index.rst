@@ -6,7 +6,7 @@
 :github_url: https://github.com/PKU-DAIR/open-box
 
 ###############################################################
-This is a docs for test!!!
+This is a docs for test!!! :octicon:`rocket;1em`
 ###############################################################
 
 **OpenBox** is an efficient open-source system designed for **solving

@@ -32,9 +32,8 @@ author = 'JHJ'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+# https://www.sphinx-doc.org/en/master/usage/extensions/index.html
 extensions = [
-    'myst_parser',
-    'sphinx_copybutton',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
@@ -42,13 +41,17 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.napoleon',
+    'myst_parser',          # https://myst-parser.readthedocs.io
+    'sphinx_copybutton',    # https://sphinx-copybutton.readthedocs.io
+    "sphinx_design",        # https://sphinx-design.readthedocs.io
+    'notfound.extension',   # https://sphinx-notfound-page.readthedocs.io
 ]
 
 # https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html
 # example:
-#     rst: :ref:`design principle <overview/overview:design principle>`
-#     md: {ref}`design principle <overview/overview:design principle>`
-#         or [](<overview/overview:design principle>)  (hoverxref CANNOT identify this syntax!)
+#     rst:   :ref:`design principle <overview/overview:design principle>`
+#     md:    {ref}`design principle <overview/overview:design principle>`
+#            or [](<overview/overview:design principle>)  (hoverxref CANNOT identify this syntax!)
 extensions += ['sphinx.ext.autosectionlabel']
 # Make sure the target is unique
 autosectionlabel_prefix_document = True  # ref example: `dir/file:header`
@@ -75,7 +78,7 @@ myst_enable_extensions = [
     "attrs_image",  # (experimental) https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#inline-attributes
 ]
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
-myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle)
+myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle) (hoverxref CANNOT identify this syntax!)
 
 
 # Show tooltip when hover on the reference. Currently, only Read the Docs is supported as backend server!
@@ -83,9 +86,9 @@ myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle)
 extensions += ['hoverxref.extension']
 hoverxref_auto_ref = True
 hoverxref_role_types = {}
-hoverxref_default_type = 'tooltip'
-hoverxref_sphinxtabs = True
-hoverxref_mathjax = True
+hoverxref_default_type = 'tooltip'  # 'modal' or 'tooltip'
+# hoverxref_sphinxtabs = True
+# hoverxref_mathjax = True
 
 
 # Add any paths that contain templates here, relative to this directory.
