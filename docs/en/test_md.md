@@ -1,3 +1,20 @@
+---
+myst:
+  substitutions:
+    key1: I'm a **substitution**
+    key2: |
+      ```{note}
+      {{ key1 }}
+      ```
+    key3a: <img src="../imgs/ab_testing.png" alt="fishy" width="200px">
+    key3: |
+      ```{image} ../imgs/ab_testing.png
+      :alt: fishy
+      :width: 200px
+      ```
+    key4: example
+---
+
 # Quick Start
 
 This tutorial helps you run your first example with **OpenBox**.
@@ -17,6 +34,57 @@ use markdown link with autosectionlabel:
 use markdown link with anchor (`myst_heading_anchors = 3`)
 
 [](./overview/overview.md#design-principle)
+
+
+test modal
+
+{doc}`transfer learning <advanced_usage/transfer_learning>`
+
+test math
+
+{ref}`transfer learning <advanced_usage/transfer_learning:transfer learning>`
+
+test tabs
+
+{ref}`inline-tabs <test_md:test tabs>`
+
+
+
+## test tabs
+
+https://sphinx-design.readthedocs.io/en/furo-theme/tabs.html
+
+::::{tab-set}
+:::{tab-item} Markdown Input
+
+```md
+Inline: {{ key1 }}
+
+Block level:
+
+{{ key2 }}
+
+| col1     | col2     |
+| -------- | -------- |
+| {{key2}} | {{key3}} |
+
+```
+
+:::
+
+:::{tab-item} Rendered Output
+Inline: {{ key1 }}
+
+Block level:
+
+{{ key2 }}
+
+| col1     | col2     |
+| -------- | -------- |
+| {{key2}} | {{key3}} |
+
+:::
+::::
 
 
 ## test image

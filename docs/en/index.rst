@@ -103,7 +103,7 @@ HpBandSter     ×          √    ×          ×       √
 ------------------------------------------------
 
 ..  toctree::
-    :caption: Table of Contents
+    :caption: This is a docs for TEST!!!
     :maxdepth: 2
     :titlesonly:
 
