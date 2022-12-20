@@ -1,4 +1,11 @@
+---
+sd_hide_title: true
+---
+
 # Overview
+
+**The title 'Overview' is hidden** using `sd_hide_title: true`
+
 Black–box optimization (BBO) is the task of optimizing an objective function within a limited budget for function evaluations.
 ''Black-box'' means that the objective function has no analytical form so that information such as the derivative of the objective function is unavailable.
 Since the evaluation of objective functions is often expensive, the goal of black-box optimization is to find a configuration that approaches the global optimum as rapidly as possible.
@@ -73,4 +80,3 @@ The performance rank (the lower, the better) is shown in the following figure.
 For dataset information and more experimental results, please refer to our [published article](https://arxiv.org/abs/2106.00421).
 
 <img src="../../imgs/ranking_lgb_7.svg" width="80%" class="align-center">
-
