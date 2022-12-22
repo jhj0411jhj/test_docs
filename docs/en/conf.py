@@ -89,8 +89,8 @@ hoverxref_role_types = {
     'ref': 'tooltip',
 }
 hoverxref_default_type = 'tooltip'  # 'modal' or 'tooltip'
-# hoverxref_sphinxtabs = True
-# hoverxref_mathjax = True
+hoverxref_sphinxtabs = True
+hoverxref_mathjax = True
 hoverxref_tooltip_maxwidth = 650
 
 
