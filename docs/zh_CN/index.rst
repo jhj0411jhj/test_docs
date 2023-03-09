@@ -6,8 +6,10 @@
 :github_url: https://github.com/PKU-DAIR/open-box
 
 ###############################
-OpenBox: 高效通用的黑盒优化系统
+This is a test docs. For test, test, test!!!
 ###############################
+
+For test, test, test!!!
 
 **OpenBox** 是一个高效的开源系统，旨在解决泛化的黑盒优化（BBO）问题，
 例如 :ref:`自动化超参数调优 <examples/single_objective_hpo:单目标的黑盒优化>` 、自动化A/B测试、
@@ -94,13 +96,13 @@ HpBandSter     ×          √      ×          ×       √
 
 
 ..  toctree::
-    :caption: 目录
+    :caption: For test
     :maxdepth: 2
     :titlesonly:
 
-    概览 <overview/overview>
-    安装 <installation/installation_guide>
-    快速入门 <quick_start/quick_start>
+    Test概览 <overview/overview>
+    Test安装 <installation/installation_guide>
+    Test快速入门 <quick_start/quick_start>
     使用实例 <examples/examples>
     可视化 (New!) <visualization/visualization>
     高级用法 <advanced_usage/advanced_usage>
