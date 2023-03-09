@@ -61,6 +61,7 @@ opt = ParallelOptimizer(
     num_constraints=0,
     max_runs=50,
     surrogate_type='gp',
+    time_limit_per_trial=180,
     task_id='parallel_async',
 )
 history = opt.run()
@@ -83,6 +84,9 @@ history = opt.run()
 
 + **surrogate_type='gp'** 对于数学问题，我们推荐使用高斯过程(**'gp'**)作为贝叶斯优化的替代模型。 
   对于实际问题，比如超参数优化（HPO），我们推荐使用随机森林(**'prf'**)。
+
++ **time_limit_per_trial** 设置每次目标函数验证的时间预算（秒）。
+  一旦验证时间超过了这个限制，目标函数返回一个失败的测试。
   
 + **task_id** 指明优化任务名称。
 
@@ -128,6 +132,7 @@ opt = DistributedOptimizer(
     num_constraints=0,
     max_runs=50,
     surrogate_type='gp',
+    time_limit_per_trial=180,
     task_id='distributed_opt',
     port=13579,
     authkey=b'abc',
@@ -155,6 +160,9 @@ history = opt.run()
 
 + **surrogate_type='gp'** 对于数学问题，我们推荐使用高斯过程(**'gp'**)作为贝叶斯优化的替代模型。 
   对于实际问题，比如超参数优化（HPO），我们推荐使用随机森林(**'prf'**)。
+
++ **time_limit_per_trial** 设置每次目标函数验证的时间预算（秒）。
+  一旦验证时间超过了这个限制，目标函数返回一个失败的测试。
   
 + **task_id** 指明优化任务名称。
 

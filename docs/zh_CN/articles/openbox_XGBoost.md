@@ -74,7 +74,7 @@ x_train, x_val, y_train, y_val = train_test_split(X, y, test_size=0.2, stratify=
 
 def objective_function(config):
     # convert Configuration to dict
-    params = config.get_dictionary().copy()
+    params = config.get_dictionary()
 
     # fit model
     model = XGBClassifier(**params, use_label_encoder=False)
@@ -91,7 +91,7 @@ def objective_function(config):
 
 ### 执行优化
 
-定义好任务和目标函数以后，就可以调用OpenBox优化框架Optimizer执行优化。我们设置优化轮数（max_runs）为100，代表将对XGBoost模型调参100轮。优化结束后，可以打印优化结果。
+定义好任务和目标函数以后，就可以调用OpenBox优化框架Optimizer执行优化。我们设置优化轮数（max_runs）为100，代表将对XGBoost模型调参100轮。每轮最大验证时间（time_limit_per_trial）设置为180秒，超时的任务将被终止。优化结束后，可以打印优化结果。
 
 ```python
 from openbox import Optimizer
@@ -99,6 +99,7 @@ opt = Optimizer(
     objective_function,
     config_space,
     max_runs=100,
+    time_limit_per_trial=180,
     surrogate_type='prf',
     task_id='tuning_xgboost',
 )

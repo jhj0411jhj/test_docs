@@ -219,6 +219,7 @@ config_dict = {
     "num_objectives": 1,
     "num_constraints": 0,
     "max_runs": 100,
+    "time_limit_per_trial": 180,
     "task_id": "tuning_lightgbm"
 }
 ```
@@ -243,7 +244,7 @@ x_train, x_val, y_train, y_val = train_test_split(X, y, test_size=0.2, stratify=
 
 def objective_function(config):
     # convert Configuration to dict
-    params = config.get_dictionary().copy()
+    params = config.get_dictionary()
 
     # fit model
     model = LGBMClassifier(**params)
