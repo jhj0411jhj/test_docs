@@ -43,7 +43,6 @@ extensions = [
     'sphinx.ext.napoleon',
     'myst_parser',          # https://myst-parser.readthedocs.io
     'sphinx_copybutton',    # https://sphinx-copybutton.readthedocs.io
-    "sphinx_design",        # https://sphinx-design.readthedocs.io
     'notfound.extension',   # https://sphinx-notfound-page.readthedocs.io
 ]
 
@@ -74,8 +73,6 @@ myst_enable_extensions = [
     "strikethrough",
     "substitution",
     "tasklist",
-
-    "attrs_image",  # (experimental) https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#inline-attributes
 ]
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
 myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle) (hoverxref CANNOT identify this syntax!)
@@ -85,10 +82,12 @@ myst_heading_anchors = 3  # e.g., [](../overview/overview.md#design-principle) (
 # https://sphinx-hoverxref.readthedocs.io/
 extensions += ['hoverxref.extension']
 hoverxref_auto_ref = True
-hoverxref_role_types = {}
+hoverxref_role_types = {
+    'ref': 'tooltip',
+}
 hoverxref_default_type = 'tooltip'  # 'modal' or 'tooltip'
 # hoverxref_sphinxtabs = True
-# hoverxref_mathjax = True
+hoverxref_mathjax = True
 
 
 # Add any paths that contain templates here, relative to this directory.

@@ -1,8 +1,9 @@
-# Pyrfr Installation Guide
+# Pyrfr 安装教程
 
-This tutorial helps you install pyrfr.
+本教程将指导您安装pyrfr。
 
-**First,** install SWIG 3.0. Please refer to [SWIG Installation Guide](./install_swig.md).
+**首先，** 安装 SWIG 3.0. 请参考 {ref}`SWIG安装教程 <installation/install_swig:swig 安装教程>`。
 
+**其次，** 运行命令 `pip install pyrfr>=0.5.0`，pyrfr即安装完成。
 
-test test test
+对于 macOS 用户，如果您在安装 pyrfr 时遇到了困难，请参考 [提示](./install-pyrfr-on-macos.md)。
